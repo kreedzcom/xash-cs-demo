@@ -1,6 +1,6 @@
 {
   "name": "xash-cs-demo",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Play Counter-Strike 1.6 GoldSrc demos in the browser with a patched Xash3D FWGS and cs16-client WebAssembly build",
   "type": "module",
   "license": "(MIT AND GPL-3.0-only)",

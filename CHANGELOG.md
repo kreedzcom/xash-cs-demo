@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0
+
+- First stable release. Same player as 0.2.0.
+- Copyright and the package author are kreedz.com.
+
 ## 0.2.0
 
 - Published as an ESM package with compiled `dist/` and type declarations (`xash-cs-demo`, `xash-cs-demo/track`, `xash-cs-demo/net`).
