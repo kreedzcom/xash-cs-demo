@@ -1,0 +1,7 @@
+# SHA-256 of the shipped engine binaries. Verify with: npm run verify-engine
+9b7d951a6ecbaf5d4ef71599fe00c6a58b9d173d8ec29cae2fbdcebcf1525be4  engine/xash.wasm
+6f0259d276e6ebedfce462b5b3209a876b0e8f764d66b44bec8b1ca35b9e0b52  engine/xash.js
+960b1d9251c3d86bc95938f92beb3fccb0b6f17887f4656c1e5470d8cceb58fc  engine/filesystem_stdio.wasm
+2389099bcb2bd909d5ae9aa885fb74fc11b4436509ead33eedf207518707c5d5  engine/libref_webgl2.wasm
+e674ab2723623b0f1d209e2e49cd7a4c75563d97dd5a9d62b2e1451767d508e6  engine/cstrike/cl_dlls/client_emscripten_wasm32.wasm
+711d3c5945c32f57559502eb7b04c702c4ab8a80fa8222a3e370ca5a1d49657c  engine/cstrike/cl_dlls/menu_emscripten_wasm32.wasm
