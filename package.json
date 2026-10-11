@@ -1,0 +1,88 @@
+{
+  "name": "xash-cs-demo",
+  "version": "0.2.0",
+  "description": "Play Counter-Strike 1.6 GoldSrc demos in the browser with a patched Xash3D FWGS and cs16-client WebAssembly build",
+  "type": "module",
+  "license": "(MIT AND GPL-3.0-only)",
+  "author": "kreedz.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kreedzcom/xash-cs-demo.git"
+  },
+  "homepage": "https://github.com/kreedzcom/xash-cs-demo#readme",
+  "bugs": {
+    "url": "https://github.com/kreedzcom/xash-cs-demo/issues"
+  },
+  "keywords": [
+    "xash3d",
+    "counter-strike",
+    "cs16",
+    "goldsrc",
+    "demo",
+    "hlviewer",
+    "kreedz",
+    "wasm",
+    "webassembly"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./track": {
+      "types": "./dist/track.d.ts",
+      "import": "./dist/track.js"
+    },
+    "./net": {
+      "types": "./dist/net.d.ts",
+      "import": "./dist/net.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "engine",
+    "assets",
+    "scripts/verify-engine.mjs",
+    "scripts/pack-cstrike-core.mjs",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepack": "node scripts/prepack.mjs",
+    "prepublishOnly": "npm run typecheck && npm test && npm run verify-engine && npm run prepack && npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "verify-engine": "node scripts/verify-engine.mjs"
+  },
+  "peerDependencies": {
+    "xash3d-fwgs": "^1.2.2"
+  },
+  "peerDependenciesMeta": {
+    "xash3d-fwgs": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vite": "^8.0.16",
+    "vitest": "^3.2.4",
+    "xash3d-fwgs": "^1.2.2"
+  }
+}

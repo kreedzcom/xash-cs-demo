@@ -1,0 +1,15 @@
+# .gitignore must not decide the tarball. dist/ and assets/extras.pk3 are
+# gitignored, and both have to be published.
+node_modules
+.github
+examples
+.idea
+coverage
+*.tgz
+src
+tsconfig.json
+vitest.config.ts
+tsup.config.ts
+.gitattributes
+.dockerignore
+scripts/prepack.mjs
