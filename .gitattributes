@@ -1,3 +1,4 @@
 *.wasm binary
 *.ttf binary
 *.pk3 binary
+engine/xash.js binary
